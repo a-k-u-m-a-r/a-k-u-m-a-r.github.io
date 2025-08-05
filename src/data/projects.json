@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "E-commerce Platform",
+    "description": "A full-stack e-commerce platform built with React, Node.js, and MongoDB",
+    "image": "/api/placeholder/400/300",
+    "technologies": ["React", "Node.js", "MongoDB", "Express"],
+    "github": "https://github.com/username/ecommerce-platform",
+    "demo": "https://demo-ecommerce.com",
+    "details": "A comprehensive e-commerce solution featuring user authentication, product management, shopping cart functionality, and payment integration. Built with modern web technologies and following best practices for scalability and performance."
+  },
+  {
+    "id": "2",
+    "title": "Task Management App",
+    "description": "A collaborative task management application with real-time updates",
+    "image": "/api/placeholder/400/300",
+    "technologies": ["TypeScript", "React", "Socket.io", "PostgreSQL"],
+    "github": "https://github.com/username/task-manager",
+    "demo": "https://demo-taskmanager.com",
+    "details": "A real-time collaborative task management application that allows teams to organize projects, assign tasks, and track progress. Features include drag-and-drop kanban boards, real-time notifications, and team collaboration tools."
+  },
+  {
+    "id": "3",
+    "title": "Weather Dashboard",
+    "description": "A responsive weather dashboard with data visualization",
+    "image": "/api/placeholder/400/300",
+    "technologies": ["React", "Chart.js", "OpenWeather API", "Tailwind CSS"],
+    "github": "https://github.com/username/weather-dashboard",
+    "demo": "https://demo-weather.com",
+    "details": "An interactive weather dashboard that displays current conditions, forecasts, and historical weather data with beautiful charts and visualizations. Features location-based weather, multiple city tracking, and responsive design."
+  }
+]

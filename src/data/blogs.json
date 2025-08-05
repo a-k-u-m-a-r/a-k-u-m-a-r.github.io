@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "Building Scalable React Applications",
+    "excerpt": "Learn best practices for structuring and scaling React applications for production",
+    "date": "2024-01-15",
+    "readTime": "8 min read",
+    "tags": ["React", "JavaScript", "Architecture"],
+    "image": "/api/placeholder/600/400",
+    "content": "In this article, we'll explore the essential patterns and practices for building React applications that can scale as your team and codebase grow..."
+  },
+  {
+    "id": "2",
+    "title": "TypeScript Tips and Tricks",
+    "excerpt": "Advanced TypeScript techniques to improve your development experience",
+    "date": "2024-01-08",
+    "readTime": "6 min read",
+    "tags": ["TypeScript", "JavaScript", "Development"],
+    "image": "/api/placeholder/600/400",
+    "content": "TypeScript has become an essential tool for modern JavaScript development. Here are some advanced techniques that will help you write better, more maintainable code..."
+  },
+  {
+    "id": "3",
+    "title": "Modern CSS Techniques",
+    "excerpt": "Exploring CSS Grid, Flexbox, and modern layout techniques",
+    "date": "2024-01-01",
+    "readTime": "10 min read",
+    "tags": ["CSS", "Web Design", "Frontend"],
+    "image": "/api/placeholder/600/400",
+    "content": "CSS has evolved significantly in recent years. Let's dive into modern CSS techniques that will make your layouts more flexible and maintainable..."
+  }
+]
