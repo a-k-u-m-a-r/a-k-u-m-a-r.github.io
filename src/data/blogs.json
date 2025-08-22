@@ -1,32 +1,99 @@
 [
   {
+    "title": "TurtleSim Spawn Killer Navigator Project",
+    "image": null,
+    "tags": [
+        "ROS2",
+        "Python",
+        "Linux"
+    ],
+    "exercept": "Showcase basic knowledge of ROS2 nodes, services, clients, launch files, packages, and more...",
+    "date": "2025-08-16",
+    "readTime": null,
     "id": "1",
-    "title": "Building Scalable React Applications",
-    "excerpt": "Learn best practices for structuring and scaling React applications for production",
-    "date": "2024-01-15",
-    "readTime": "8 min read",
-    "tags": ["React", "JavaScript", "Architecture"],
-    "image": "/api/placeholder/600/400",
-    "content": "In this article, we'll explore the essential patterns and practices for building React applications that can scale as your team and codebase grow..."
-  },
+    "blocks": [
+        {
+            "type": "text",
+            "content": "# My Goal\nROS has always been a daunting subject for me, but I wanted to remedy that by taking a course. I took **link to course** to learn the basics of ROS, and I made a basic turtlesim project that showcases basic understanding of ROS Fundamentals\n\n# Objective\nCreate a turtlesim spawner that randomly spawns turtles within the environment. The turtlesim agent should navigate to the closest turtle at any moment of time and eliminate a spawned turtle once it touches it. To achieve this, I created the following architecture for my code. \n",
+            "metadata": {}
+        },
+        {
+            "type": "image",
+            "content": "IMG_0385.jpg",
+            "metadata": {}
+        },
+        {
+            "type": "text",
+            "content": "\n\n## Skills Acquired\n- Create services and clients\n- Create publishers and subscribers\n- Create custom message/service interfaces\n- Create packages\n- Create launch file \n",
+            "metadata": {}
+        },
+        {
+            "type": "image",
+            "content": "IMG_0385.jpg",
+            "metadata": {}
+        },
+        {
+            "type": "text",
+            "content": "\n# Breakdown:\nThe idea was to have three main nodes in charge of this project: spawner node, controller node, and manager node. The spawner node would keep track of all the turtles spawned and spawn the turtles. The controller node provided the ability to the turtle to navigate to any point in the map. The manager node would compute the closest spawned turtle to the driver turtle to navigate to and would handle the deletion of turtles. **NOTE: The following solution may not be the most optimal, it was just one I figure out on my own**\n\n## Spawner Node\n\n## Controller Node\n\n## Manager Node",
+            "metadata": {}
+        }
+    ]
+  }, 
   {
+    "title": "TurtleSim Killer Navigator Project",
+    "image": null,
+    "tags": [
+        "ROS2",
+        "Python",
+        "Linux"
+    ],
+    "exercept": " basic knowledge of ROS2 nodes, services, clients, launch files, packages, and more...",
+    "date": "2025-08-18",
+    "readTime": null,
     "id": "2",
-    "title": "TypeScript Tips and Tricks",
-    "excerpt": "Advanced TypeScript techniques to improve your development experience",
-    "date": "2024-01-08",
-    "readTime": "6 min read",
-    "tags": ["TypeScript", "JavaScript", "Development"],
-    "image": "/api/placeholder/600/400",
-    "content": "TypeScript has become an essential tool for modern JavaScript development. Here are some advanced techniques that will help you write better, more maintainable code..."
+    "blocks": [
+        {
+            "type": "text",
+            "content": "# My Goal\nROS has always been a daunting subject for me, but I wanted to remedy that by taking a course. I took **link to course** to learn the basics of ROS, and I made a basic turtlesim project that showcases basic understanding of ROS Fundamentals\n\n# Objective\nCreate a turtlesim spawner that randomly spawns turtles within the environment. The turtlesim agent should navigate to the closest turtle at any moment of time and eliminate a spawned turtle once it touches it. To achieve this, I created the following architecture for my code. \n",
+            "metadata": {}
+        },
+        {
+            "type": "image",
+            "content": "IMG_0385.jpg",
+            "metadata": {}
+        },
+        {
+            "type": "text",
+            "content": "\n\n## Skills Acquired\n- Create services and clients\n- Create publishers and subscribers\n- Create custom message/service interfaces\n- Create packages\n- Create launch file \n",
+            "metadata": {}
+        },
+        {
+            "type": "image",
+            "content": "IMG_0385.jpg",
+            "metadata": {}
+        },
+        {
+            "type": "text",
+            "content": "\n# Breakdown:\nThe idea was to have three main nodes in charge of this project: spawner node, controller node, and manager node. The spawner node would keep track of all the turtles spawned and spawn the turtles. The controller node provided the ability to the turtle to navigate to any point in the map. The manager node would compute the closest spawned turtle to the driver turtle to navigate to and would handle the deletion of turtles. **NOTE: The following solution may not be the most optimal, it was just one I figure out on my own**\n\n## Spawner Node\n\n## Controller Node\n\n## Manager Node",
+            "metadata": {}
+        }
+    ]
   },
   {
-    "id": "3",
-    "title": "Modern CSS Techniques",
-    "excerpt": "Exploring CSS Grid, Flexbox, and modern layout techniques",
-    "date": "2024-01-01",
-    "readTime": "10 min read",
-    "tags": ["CSS", "Web Design", "Frontend"],
-    "image": "/api/placeholder/600/400",
-    "content": "CSS has evolved significantly in recent years. Let's dive into modern CSS techniques that will make your layouts more flexible and maintainable..."
-  }
+    "title": "Test Document",
+    "image": null,
+    "tags": ["TEST"],
+    "exercept": "Test doucment",
+    "date": "2025-08-16",
+    "readTime": 6,
+    "id": "heyyy",
+    "blocks": [
+        {
+            "type": "text",
+            "content": "# HI\n## HI\n### Hello\n#### Hey There\n##### How are you doing?\n###### What's up",
+            "metadata": {}
+        }
+    ]
+}
+
 ]

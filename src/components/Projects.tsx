@@ -4,7 +4,7 @@ import projectsData from '../data/projects.json';
 
 const Projects = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
+    <div className="min-h-screen">
       <div className="container mx-auto px-4 py-8">
         <nav className="flex justify-between items-center mb-16">
           <Link to="/" className="text-2xl font-bold text-white">Portfolio</Link>
@@ -34,7 +34,7 @@ const Projects = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectsData.map((project) => (
-              <Card key={project.id} className="bg-gray-800 border-gray-700 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card key={project.id} style={{background: "#1e2021"}}>
                 <div className="aspect-video bg-gray-700 rounded-t-lg overflow-hidden">
                   <img 
                     src={project.image} 

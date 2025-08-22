@@ -1,0 +1,75 @@
+/* Gruvbox Dark for Tailwind Typography output */
+.root {
+  /* container look */
+  background: #282828; /* bg0 */
+  color: #ebdbb2;      /* fg1 */
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+/* Headings (unique colors per level) */
+.root :where(h1) { color: #fabd2f; } /* yellow */
+.root :where(h2) { color: #fe8019; } /* orange */
+.root :where(h3) { color: #83a598; } /* blue */
+.root :where(h4) { color: #b8bb26; } /* green */
+.root :where(h5) { color: #d3869b; } /* purple */
+.root :where(h6) { color: #fb4934; } /* red  */
+
+/* Links */
+.root :where(a) {
+  color: #83a598; /* blue/aqua */
+  text-decoration: none;
+}
+.root :where(a:hover) { text-decoration: underline; }
+
+/* Strong / emphasis */
+.root :where(strong) { color: #fe8019; } /* orange */
+
+/* Lists (bullet color) */
+.root :where(ul li)::marker { color: #b8bb26; } /* green */
+.root :where(ol li)::marker { color: #d3869b; } /* purple (counter) */
+
+/* Blockquote */
+.root :where(blockquote) {
+  color: #ebdbb2;
+  border-left: 4px solid #83a598;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+/* Inline code */
+.root :where(code) {
+  background: #1d2021;
+  color: #d3869b;
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+}
+
+/* Code blocks */
+.root :where(pre) {
+  background: #1d2021;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+.root :where(pre code) {
+  background: none;
+  color: #ebdbb2;
+  padding: 0; /* remove inline code padding inside blocks */
+}
+
+/* Tables */
+.root :where(table) { border-collapse: collapse; }
+.root :where(th) {
+  color: #fabd2f;
+  border-bottom: 1px solid #a89984;
+  padding: 0.5rem;
+}
+.root :where(td) {
+  border-bottom: 1px solid #3c3836;
+  padding: 0.5rem;
+}
+
+/* Horizontal rule */
+.root :where(hr) { border-color: #665c54; }

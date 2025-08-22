@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -114,16 +115,21 @@
   * {
     @apply border-border outline-ring/50;
   }
-  html, body {
-    @apply bg-gradient-to-br from-gray-900 to-gray-800 text-foreground;
+  html {
+    background-color: #282828;
+    height: 100%;
     margin: 0;
     padding: 0;
   }
   body {
-    @apply bg-gradient-to-br from-gray-900 to-gray-800 text-foreground;
+    @apply text-foreground;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background: transparent;
   }
   #root {
-    @apply bg-gradient-to-br from-gray-900 to-gray-800;
     min-height: 100vh;
+    background: transparent;
   }
 }

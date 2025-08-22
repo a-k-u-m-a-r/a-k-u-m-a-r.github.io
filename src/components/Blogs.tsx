@@ -4,7 +4,7 @@ import blogsData from '../data/blogs.json';
 
 const Blogs = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
+    <div className="min-h-screen">
       <div className="container mx-auto px-4 py-8">
         <nav className="flex justify-between items-center mb-16">
           <Link to="/" className="text-2xl font-bold text-white">Portfolio</Link>
@@ -32,9 +32,10 @@ const Blogs = () => {
             </p>
           </div>
 
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogsData.map((blog) => (
-              <Card key={blog.id} className="bg-gray-800 border-gray-700 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Card key={blog.id} style={{background: "#1e2021"}}>
                 <CardHeader>
                   <div className="flex justify-between items-start mb-2">
                     <time className="text-sm text-gray-400">

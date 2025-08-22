@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
+    <div className="min-h-screen">
       <div className="container mx-auto px-4 py-8">
         <nav className="flex justify-between items-center mb-16">
           <h1 className="text-2xl font-bold text-white">Portfolio</h1>
@@ -26,7 +26,7 @@ const Home = () => {
           <div className="space-y-6">
             <div className="space-y-4">
               <h2 className="text-5xl font-bold text-white leading-tight">
-                Hi, I'm <span className="text-blue-400">Akshay Kumar</span>
+                Hi, I'm <span style={{ color: "#fb4934" }}>Akshay Kumar</span>
               </h2>
               <h3 className="text-2xl text-gray-300">
                 Aspiring Robotics Engineer
@@ -37,7 +37,7 @@ const Home = () => {
               This website is to serve as digital representation of all the work I completed, projects in progress, and things I want to blog about. ALSO, its IN PROGRESS atm.
             </p>
 
-            <div className="flex gap-4 pt-4">
+            {/* <div className="flex gap-4 pt-4">
               <Link
                 to="/projects"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
@@ -50,7 +50,7 @@ const Home = () => {
               >
                 Read Blogs
               </Link>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex justify-center lg:justify-end">
