@@ -1,99 +1,55 @@
 [
-  {
-    "title": "TurtleSim Spawn Killer Navigator Project",
-    "image": null,
-    "tags": [
-        "ROS2",
-        "Python",
-        "Linux"
-    ],
-    "exercept": "Showcase basic knowledge of ROS2 nodes, services, clients, launch files, packages, and more...",
-    "date": "2025-08-16",
-    "readTime": null,
-    "id": "1",
-    "blocks": [
-        {
-            "type": "text",
-            "content": "# My Goal\nROS has always been a daunting subject for me, but I wanted to remedy that by taking a course. I took **link to course** to learn the basics of ROS, and I made a basic turtlesim project that showcases basic understanding of ROS Fundamentals\n\n# Objective\nCreate a turtlesim spawner that randomly spawns turtles within the environment. The turtlesim agent should navigate to the closest turtle at any moment of time and eliminate a spawned turtle once it touches it. To achieve this, I created the following architecture for my code. \n",
-            "metadata": {}
-        },
-        {
-            "type": "image",
-            "content": "IMG_0385.jpg",
-            "metadata": {}
-        },
-        {
-            "type": "text",
-            "content": "\n\n## Skills Acquired\n- Create services and clients\n- Create publishers and subscribers\n- Create custom message/service interfaces\n- Create packages\n- Create launch file \n",
-            "metadata": {}
-        },
-        {
-            "type": "image",
-            "content": "IMG_0385.jpg",
-            "metadata": {}
-        },
-        {
-            "type": "text",
-            "content": "\n# Breakdown:\nThe idea was to have three main nodes in charge of this project: spawner node, controller node, and manager node. The spawner node would keep track of all the turtles spawned and spawn the turtles. The controller node provided the ability to the turtle to navigate to any point in the map. The manager node would compute the closest spawned turtle to the driver turtle to navigate to and would handle the deletion of turtles. **NOTE: The following solution may not be the most optimal, it was just one I figure out on my own**\n\n## Spawner Node\n\n## Controller Node\n\n## Manager Node",
-            "metadata": {}
-        }
-    ]
-  }, 
-  {
-    "title": "TurtleSim Killer Navigator Project",
-    "image": null,
-    "tags": [
-        "ROS2",
-        "Python",
-        "Linux"
-    ],
-    "exercept": " basic knowledge of ROS2 nodes, services, clients, launch files, packages, and more...",
-    "date": "2025-08-18",
-    "readTime": null,
-    "id": "2",
-    "blocks": [
-        {
-            "type": "text",
-            "content": "# My Goal\nROS has always been a daunting subject for me, but I wanted to remedy that by taking a course. I took **link to course** to learn the basics of ROS, and I made a basic turtlesim project that showcases basic understanding of ROS Fundamentals\n\n# Objective\nCreate a turtlesim spawner that randomly spawns turtles within the environment. The turtlesim agent should navigate to the closest turtle at any moment of time and eliminate a spawned turtle once it touches it. To achieve this, I created the following architecture for my code. \n",
-            "metadata": {}
-        },
-        {
-            "type": "image",
-            "content": "IMG_0385.jpg",
-            "metadata": {}
-        },
-        {
-            "type": "text",
-            "content": "\n\n## Skills Acquired\n- Create services and clients\n- Create publishers and subscribers\n- Create custom message/service interfaces\n- Create packages\n- Create launch file \n",
-            "metadata": {}
-        },
-        {
-            "type": "image",
-            "content": "IMG_0385.jpg",
-            "metadata": {}
-        },
-        {
-            "type": "text",
-            "content": "\n# Breakdown:\nThe idea was to have three main nodes in charge of this project: spawner node, controller node, and manager node. The spawner node would keep track of all the turtles spawned and spawn the turtles. The controller node provided the ability to the turtle to navigate to any point in the map. The manager node would compute the closest spawned turtle to the driver turtle to navigate to and would handle the deletion of turtles. **NOTE: The following solution may not be the most optimal, it was just one I figure out on my own**\n\n## Spawner Node\n\n## Controller Node\n\n## Manager Node",
-            "metadata": {}
-        }
-    ]
-  },
-  {
-    "title": "Test Document",
-    "image": null,
-    "tags": ["TEST"],
-    "exercept": "Test doucment",
-    "date": "2025-08-16",
-    "readTime": 6,
-    "id": "heyyy",
-    "blocks": [
-        {
-            "type": "text",
-            "content": "# HI\n## HI\n### Hello\n#### Hey There\n##### How are you doing?\n###### What's up",
-            "metadata": {}
-        }
-    ]
-}
-
+    {
+        "id": "personal-site",
+        "title": "Ideologies and Metholodigies behind my site",
+        "image": null,
+        "tags": [
+            "Python",
+            "React",
+            "Vite"
+        ],
+        "excerpt": "A walkthrough of the problems that my website solved for me",
+        "date": "2025-08-24",
+        "readTime": "8 mins",
+        "publish?": false,
+        "type": "blog",
+        "blocks": [
+            {
+                "type": "text",
+                "content": "Welcome to my site, this article describes the ideology and methodology behind the site's creation.\n# Problem\nI have been a fan of the obsidian markdown editor for quite some time. I have used it for various note-taking endeavors such as studying, planning, documenting, etc. As a result, I have years of content about projects and other materials that I want to easily port over to my portfolio website with minimal work. I wanted the process to be pain-free and as cost-effective as possible. \n\n# Architecture \n## Portfolio Website\nTo achieve the former, I created a base portfolio website using React + Vite to render my static web content. This website uses json object to map key metadata into the cards to display, while also having a markdown content section that is rendered using react markdown. \n## Parser Unit\n**What it does:**\nThe json object is created by a parser that I created in Python. The parser runs in passes, using regex to find particular unique elements such as code blocks, images, and tables. \n**How it works:**\nIt creates a block which contains the markdown content. Everytime, a unique element is found the block splits into sub blocks that carry type info (image, text, table, code). These sub blocks are then reassembled into a list representing the content in the document. \n## Manager Unit\n## JSON Manipulator Unit",
+                "metadata": {}
+            }
+        ]
+    },
+    {
+        "id": "turtlesim-spawn-killer",
+        "title": "TurtleSim Spawn Killer Navigator Project",
+        "image": null,
+        "tags": [
+            "ROS2",
+            "Python"
+        ],
+        "excerpt": "Showcase basic knowledge of ROS2 nodes, services, clients, launch files, packages, and more...",
+        "date": "2025-08-12",
+        "readTime": "10 mins",
+        "publish?": false,
+        "type": "blog",
+        "blocks": [
+            {
+                "type": "text",
+                "content": "# My Goal\nROS has always been a daunting subject for me, but I wanted to remedy that by taking a course. I took **link to course** to learn the basics of ROS, and I made a basic turtlesim project that showcases basic understanding of ROS Fundamentals\n\n# Objective\nCreate a turtlesim spawner that randomly spawns turtles within the environment. The turtlesim agent should navigate to the closest turtle at any moment of time and eliminate a spawned turtle once it touches it. To achieve this, I created the following architecture for my code. \n",
+                "metadata": {}
+            },
+            {
+                "type": "image",
+                "content": "IMG_0385.jpg",
+                "metadata": {}
+            },
+            {
+                "type": "text",
+                "content": "\n\n## Skills Acquired\n- Create services and clients\n- Create publishers and subscribers\n- Create custom message/service interfaces\n- Create packages\n- Create launch file \n\n# Breakdown:\nThe idea was to have three main nodes in charge of this project: spawner node, controller node, and manager node. The spawner node would keep track of all the turtles spawned and spawn the turtles. The controller node provided the ability to the turtle to navigate to any point in the map. The manager node would compute the closest spawned turtle to the driver turtle to navigate to and would handle the deletion of turtles. **NOTE: The following solution may not be the most optimal, it was just one I figure out on my own**\n\n## Spawner Node\n\n## Controller Node\n\n## Manager Node",
+                "metadata": {}
+            }
+        ]
+    }
 ]

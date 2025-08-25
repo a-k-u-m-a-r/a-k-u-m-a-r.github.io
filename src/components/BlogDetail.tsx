@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import blogsData from '../data/blogs.json';
 import Markdown from './Markdown';
+import styles from './Markdown.module.css';
 
 const BlogDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -13,7 +14,6 @@ const BlogDetail = () => {
       }
   })
     
-
 
   if (!blog) {
     return (
@@ -31,34 +31,39 @@ const BlogDetail = () => {
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-4xl mx-auto px-6">
-        <Link to="/blogs" className="text-blue-400 hover:text-blue-300 mb-8 inline-block">
+        {/* <Link to="/blogs" className="text-blue-400 hover:text-blue-300 mb-8 inline-block">
           ← Back to Blogs
-        </Link>
+        </Link> */}
         
         <header className="mb-8">
-          <h1 className="text-4xl font-bold text-white mb-4">{blog.title}</h1>
-          <div className="flex items-center gap-4 text-gray-300 text-sm mb-6">
+          <div className="flex items-center justify-between mb-4">
+            <Link to="/blogs" className="text-blue-400 hover:text-blue-300 text-sm">
+              ← Back to Blogs
+            </Link>
+          </div>
+          <div className={`prose prose-gruvbox prose-lg max-w-none ${styles.root}`}>
+            <h1>{blog.title}</h1>
+          </div>
+          <div className="flex items-center justify-center gap-4 text-gray-300 text-sm mb-6 flex-wrap">
             <span>{blog.date}</span>
             <span>•</span>
             <span>{blog.readTime}</span>
-          </div>
-          <div className="flex gap-2 mb-6">
-            {blog.tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 bg-blue-600 text-white text-xs rounded-full"
-              >
-                {tag}
-              </span>
-            ))}
+            <span>•</span>
+            <div className="flex gap-2">
+              {blog.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="px-3 py-1 bg-blue-600 text-white text-xs rounded-full"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </header>
 
-        <div className="prose prose-invert prose-lg max-w-none text-left">
-          
-
+        <div className="text-left">
           {blogPieces}
-
         </div>
       </div>
     </div>

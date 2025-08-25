@@ -28,11 +28,12 @@ const Projects = () => {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-white mb-4">My Projects</h1>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              {/* Blurb explaining */}
+              COMING SOON! IN THE MEAN TIME CHECKOUT BLOGS !!!
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Create a separate branch to handle project creation */}
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectsData.map((project) => (
               <Card key={project.id} style={{background: "#1e2021"}}>
                 <div className="aspect-video bg-gray-700 rounded-t-lg overflow-hidden">
@@ -81,7 +82,7 @@ const Projects = () => {
                 </CardFooter>
               </Card>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
