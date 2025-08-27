@@ -1,36 +1,35 @@
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import projectsData from '../data/projects.json';
+import { gruvboxTheme } from '../theme/gruvbox';
+import Navbar from './Navbar';
 
 const Projects = () => {
   return (
-    <div className="min-h-screen">
-      <div className="container mx-auto px-4 py-8">
-        <nav className="flex justify-between items-center mb-16">
-          <Link to="/" className="text-2xl font-bold text-white">Portfolio</Link>
-          <div className="flex gap-6">
-            <Link 
-              to="/projects" 
-              className="text-blue-400 font-medium border-b-2 border-blue-400"
+    <div className="min-h-screen py-12" style={{ backgroundColor: gruvboxTheme.bg0 }}>
+      <div className="max-w-6xl mx-auto px-6">
+        <Navbar />
+      </div>
+      
+      <div className="max-w-4xl mx-auto px-6">
+        <div 
+          className="rounded-xl p-8 mb-8"
+        >
+          <div className="text-center">
+            <h1 
+              className="text-4xl font-bold mb-4"
+              style={{ color: gruvboxTheme.red }}
             >
-              Projects
-            </Link>
-            <Link 
-              to="/blogs" 
-              className="text-gray-300 hover:text-white transition-colors"
+              My Projects
+            </h1>
+            <p 
+              className="text-lg max-w-2xl mx-auto"
+              style={{ color: gruvboxTheme.fg4 }}
             >
-              Blogs
-            </Link>
-          </div>
-        </nav>
-
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-white mb-4">My Projects</h1>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               COMING SOON! IN THE MEAN TIME CHECKOUT BLOGS !!!
             </p>
           </div>
+        </div>
 
           {/* Create a separate branch to handle project creation */}
           {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -85,7 +84,6 @@ const Projects = () => {
           </div> */}
         </div>
       </div>
-    </div>
   );
 };
 
