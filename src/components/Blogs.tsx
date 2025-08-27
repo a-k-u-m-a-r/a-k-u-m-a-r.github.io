@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import blogsData from '../data/blogs.json';
 
 const Blogs = () => {
@@ -33,30 +32,61 @@ const Blogs = () => {
           </div>
 
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-col gap-4">
             {blogsData.map((blog) => (
-              <Card key={blog.id} style={{background: "#1e2021"}}>
-                <CardHeader>
+              <Link
+                key={blog.id}
+                to={`/blog/${blog.id}`}
+                className="bg-[#1e2021] rounded-lg flex items-stretch hover:bg-[#2a2d2e] transition-colors cursor-pointer overflow-hidden"
+              >
+                <div className="w-32 bg-gray-700 flex-shrink-0 flex items-center justify-center rounded-l-lg">
+                  {blog.image ? (
+                    <img 
+                      src={blog.image} 
+                      alt={blog.title}
+                      className="w-full h-full object-cover rounded-l-lg"
+                    />
+                  ) : (
+                    <div className="text-gray-400 text-center">
+                      <div className="text-lg mb-1">📄</div>
+                      <div className="text-xs">No Image</div>
+                    </div>
+                  )}
+                </div>
+                
+                <div className="flex-1 min-w-0 p-4">
                   <div className="flex justify-between items-start mb-2">
-                    <time className="text-sm text-gray-400">
-                      {new Date(blog.date).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
-                      })}
-                    </time>
+                    <div className="flex items-center gap-3">
+                      <time className="text-sm text-gray-400">
+                        {new Date(blog.date).toLocaleDateString('en-US', { 
+                          year: 'numeric', 
+                          month: 'long', 
+                          day: 'numeric' 
+                        })}
+                      </time>
+                      <div className="flex flex-wrap gap-2">
+                        {blog.tags.map((tag) => (
+                          <span 
+                            key={tag}
+                            className="bg-green-900 text-green-300 text-xs px-2 py-1 rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                     <span className="text-sm text-gray-400">{blog.readTime}</span>
                   </div>
-                  <CardTitle className="text-xl text-white leading-tight">
+                  
+                  <h3 className="text-lg font-bold text-white mb-1 leading-tight text-left">
                     {blog.title}
-                  </CardTitle>
-                  <CardDescription className="text-gray-300">
+                  </h3>
+                  
+                  <p className="text-gray-300 text-sm mb-2 line-clamp-2 text-left">
                     {blog.excerpt}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
+                  </p>
+                  
+                  {/* <div className="flex flex-wrap gap-2">
                     {blog.tags.map((tag) => (
                       <span 
                         key={tag}
@@ -65,18 +95,9 @@ const Blogs = () => {
                         {tag}
                       </span>
                     ))}
-                  </div>
-                </CardContent>
-                
-                <CardFooter>
-                  <Link
-                    to={`/blog/${blog.id}`}
-                    className="w-full bg-blue-600 text-white text-center px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                  >
-                    Read Article
-                  </Link>
-                </CardFooter>
-              </Card>
+                  </div> */}
+                </div>
+              </Link>
             ))}
           </div>
         </div>
