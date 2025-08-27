@@ -2,6 +2,8 @@ import { Link, useParams } from 'react-router-dom';
 import blogsData from '../data/blogs.json';
 import Markdown from './Markdown';
 import styles from './Markdown.module.css';
+import { gruvboxTheme } from '../theme/gruvbox';
+import Navbar from './Navbar';
 
 const BlogDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -29,22 +31,26 @@ const BlogDetail = () => {
   }
 
   return (
-    <div className="min-h-screen py-12">
+    <div className="min-h-screen py-12" style={{ backgroundColor: gruvboxTheme.bg0 }}>
+      <div className="max-w-6xl mx-auto px-6">
+        <Navbar />
+      </div>
+      
       <div className="max-w-4xl mx-auto px-6">
-        {/* <Link to="/blogs" className="text-blue-400 hover:text-blue-300 mb-8 inline-block">
-          ← Back to Blogs
-        </Link> */}
-        
         <header className="mb-8">
           <div className="flex items-center justify-between mb-4">
-            <Link to="/blogs" className="text-blue-400 hover:text-blue-300 text-sm">
+            <Link 
+              to="/blogs" 
+              className="text-sm hover:opacity-80 transition-colors"
+              style={{ color: gruvboxTheme.blue }}
+            >
               ← Back to Blogs
             </Link>
           </div>
           <div className={`prose prose-gruvbox prose-lg max-w-none ${styles.root}`}>
             <h1>{blog.title}</h1>
           </div>
-          <div className="flex items-center justify-center gap-4 text-gray-300 text-sm mb-6 flex-wrap">
+          <div className="flex items-center justify-center gap-4 text-sm mb-6 flex-wrap" style={{ color: gruvboxTheme.fg3 }}>
             <span>{blog.date}</span>
             <span>•</span>
             <span>{blog.readTime}</span>
@@ -53,7 +59,11 @@ const BlogDetail = () => {
               {blog.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 bg-blue-600 text-white text-xs rounded-full"
+                  className="px-3 py-1 text-xs rounded-full"
+                  style={{ 
+                    backgroundColor: gruvboxTheme.blue, 
+                    color: gruvboxTheme.bg0 
+                  }}
                 >
                   {tag}
                 </span>
