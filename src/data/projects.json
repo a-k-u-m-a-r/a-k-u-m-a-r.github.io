@@ -2,11 +2,27 @@
   {
     "id": "1",
     "title": "E-commerce Platform",
-    "description": "A full-stack e-commerce platform built with React, Node.js",
+    "excerpt": "A full-stack e-commerce platform built with React, Node.js",
     "image": "bg.jpg",
-    "technologies": ["React", "Node.js", "MongoDB", "Express"],
+    "tags": ["React", "Node.js", "MongoDB", "Express"],
     "github": "https://github.com/username/ecommerce-platform",
     "demo": "https://demo-ecommerce.com",
-    "details": "# E-commerce Platform\n\nA comprehensive e-commerce solution featuring user authentication, product management, shopping cart functionality, and payment integration. Built with modern web technologies and following best practices for scalability and performance.\n\n## Key Features\n\n### 🛒 Shopping Experience\n- **Product Catalog** with advanced filtering and search\n- **Shopping Cart** with persistent state\n- **Wishlist** functionality\n- **Product Reviews** and ratings\n\n### 👤 User Management\n- **User Authentication** with JWT tokens\n- **Profile Management** with order history\n- **Address Book** for shipping\n- **Password Reset** functionality\n\n### 💳 Payment Integration\n- **Stripe Integration** for secure payments\n- **Multiple Payment Methods** (cards, PayPal)\n- **Order Tracking** system\n- **Invoice Generation**\n\n## Technical Architecture\n\n### Frontend (React)\n```javascript\n// Redux store structure\nconst store = {\n  auth: { user, token, isAuthenticated },\n  products: { items, filters, loading },\n  cart: { items, total, shipping },\n  orders: { history, current, tracking }\n};\n```\n\n### Backend (Node.js/Express)\n```javascript\n// API endpoints\napp.use('/api/auth', authRoutes);\napp.use('/api/products', productRoutes);\napp.use('/api/cart', cartRoutes);\napp.use('/api/orders', orderRoutes);\napp.use('/api/payments', paymentRoutes);\n```\n\n### Database Schema (MongoDB)\n```javascript\n// User Schema\nconst userSchema = {\n  email: String,\n  password: String,\n  profile: {\n    firstName: String,\n    lastName: String,\n    addresses: [AddressSchema]\n  },\n  orders: [OrderSchema]\n};\n```\n\n## Performance Optimizations\n\n- **Code Splitting** with React.lazy()\n- **Image Optimization** with lazy loading\n- **API Caching** with Redis\n- **Database Indexing** for fast queries\n\n> 📈 **Performance Metrics**: 95+ Lighthouse score, <2s page load time\n\n## Security Features\n\n1. **HTTPS Everywhere** - SSL/TLS encryption\n2. **Input Validation** - Prevent SQL injection\n3. **Rate Limiting** - API protection\n4. **Secure Headers** - CORS, CSP policies\n\n## Deployment\n\n- **Frontend**: Deployed on Vercel with CDN\n- **Backend**: Deployed on AWS EC2 with load balancer\n- **Database**: MongoDB Atlas with replica sets\n- **CI/CD**: GitHub Actions for automated deployment"
-  }
+    "blocks": [
+            {
+                "type": "text",
+                "content": "# My Goal\nROS has always been a daunting subject for me, but I wanted to remedy that by taking a course. I took **link to course** to learn the basics of ROS, and I made a basic turtlesim project that showcases basic understanding of ROS Fundamentals\n\n# Objective\nCreate a turtlesim spawner that randomly spawns turtles within the environment. The turtlesim agent should navigate to the closest turtle at any moment of time and eliminate a spawned turtle once it touches it. To achieve this, I created the following architecture for my code. \n",
+                "metadata": {}
+            },
+            {
+                "type": "image",
+                "content": "IMG_0385.jpg",
+                "metadata": {}
+            },
+            {
+                "type": "text",
+                "content": "\n\n## Skills Acquired\n- Create services and clients\n- Create publishers and subscribers\n- Create custom message/service interfaces\n- Create packages\n- Create launch file \n\n# Breakdown:\nThe idea was to have three main nodes in charge of this project: spawner node, controller node, and manager node. The spawner node would keep track of all the turtles spawned and spawn the turtles. The controller node provided the ability to the turtle to navigate to any point in the map. The manager node would compute the closest spawned turtle to the driver turtle to navigate to and would handle the deletion of turtles. **NOTE: The following solution may not be the most optimal, it was just one I figure out on my own**\n\n## Spawner Node\n\n## Controller Node\n\n## Manager Node",
+                "metadata": {}
+            }
+        ]
+    }
 ]

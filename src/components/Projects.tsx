@@ -61,11 +61,11 @@ const Projects = () => {
                       className="mb-4 text-left text-sm"
                       style={{ color: gruvboxTheme.orange }}
                     >
-                      {project.description}
+                      {project.excerpt}
                     </p>
                     
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map((tech) => (
+                      {project.tags.map((tech) => (
                         <span 
                           key={tech}
                           className="text-xs px-1.5 py-0.5 rounded-full"

@@ -8,6 +8,13 @@ import Navbar from './Navbar';
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
   const project = projectsData.find(p => p.id === id);
+  const projectPieces = project?.blocks.map(block => {
+        if (block.type == "image") {
+          return ( <img className="h-auto max-w-md mx-auto" src={block.content} alt="image description" />)
+        } else{
+          return (<Markdown source={block.content}></Markdown>)
+        }
+    })
 
   if (!project) {
     return (
@@ -48,7 +55,7 @@ const ProjectDetail = () => {
           </div>
           <div className="flex items-center justify-center gap-4 text-sm mb-6 flex-wrap" style={{ color: gruvboxTheme.fg3 }}>
             <div className="flex gap-2">
-              {project.technologies.map((tech) => (
+              {project.tags.map((tech) => (
                 <span
                   key={tech}
                   className="px-3 py-1 text-xs rounded-full"
@@ -105,7 +112,7 @@ const ProjectDetail = () => {
         </header>
 
         <div className="text-left">
-          <Markdown source={project.details.replace(/\\n/g, '\n')} />
+          {projectPieces}
         </div>
       </div>
     </div>
