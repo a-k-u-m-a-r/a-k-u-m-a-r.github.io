@@ -1,5 +1,5 @@
 // Gruvbox Dark theme colors
-export const gruvboxTheme = {
+export const gruvboxDark = {
   // Background colors
   bg0: '#282828',
   bg1: "#1e2021",
@@ -28,6 +28,40 @@ export const gruvboxTheme = {
   darkGray: '#1d2021',
   lightGray: '#a89984',
 } as const;
+
+// Gruvbox Light theme colors
+export const gruvboxLight = {
+  // Background colors (inverted)
+  bg0: '#fbf1c7',
+  bg1: '#f2e5bc',
+  bg2: '#d5c4a1',
+  bg3: '#bdae93',
+  bg4: '#a89984',
+
+  // Foreground colors (inverted)
+  fg0: '#282828',
+  fg1: '#3c3836',
+  fg2: '#504945',
+  fg3: '#665c54',
+  fg4: '#7c6f64',
+
+  // Accent colors (adjusted for light mode)
+  red: '#cc241d',
+  green: '#98971a',
+  yellow: '#d79921',
+  blue: '#458588',
+  purple: '#b16286',
+  aqua: '#689d6a',
+  orange: '#d65d0e',
+
+  // Neutral colors
+  gray: '#928374',
+  darkGray: '#a89984',
+  lightGray: '#3c3836',
+} as const;
+
+// Default to dark theme for backward compatibility
+export const gruvboxTheme = gruvboxDark;
 
 // CSS custom properties for dynamic theming
 export const gruvboxCSSVars = {

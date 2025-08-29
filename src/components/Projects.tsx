@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 import { Card} from '@/components/ui/card';
 import projectsData from '../data/projects.json';
-import { gruvboxTheme } from '../theme/gruvbox';
+import { useTheme } from '../context/ThemeContext';
 import Navbar from './Navbar';
 
 const Projects = () => {
+  const { theme } = useTheme();
+  
   return (
-    <div className="min-h-screen py-12" style={{ backgroundColor: gruvboxTheme.bg0 }}>
+    <div className="min-h-screen py-12" style={{ backgroundColor: theme.bg0 }}>
       <div className="max-w-6xl mx-auto px-6">
         <Navbar />
       </div>
@@ -15,7 +17,7 @@ const Projects = () => {
           <div className="text-center">
             <h1 
               className="text-4xl font-bold mb-4"
-              style={{ color: gruvboxTheme.red }}
+              style={{ color: theme.red }}
             >
               My Projects
             </h1>
@@ -37,11 +39,11 @@ const Projects = () => {
                     className="block"
                   >
                 <Card 
-                  style={{background: gruvboxTheme.bg1}} 
+                  style={{background: theme.bg1}} 
                   className="flex flex-col p-0 overflow-hidden transition-colors cursor-pointer rounded-md"
                 >
                   
-                  <div className="flex-1 overflow-hidden" style={{ backgroundColor: gruvboxTheme.bg3 }}>
+                  <div className="flex-1 overflow-hidden" style={{ backgroundColor: theme.bg3 }}>
                     <img 
                       src={project.image} 
                       alt={project.title}
@@ -53,13 +55,13 @@ const Projects = () => {
                   <div className="px-4 pb-4 flex-shrink-0">
                     <h3 
                       className="text-xl font-bold mb-2 mt-0 text-left"
-                      style={{ color: gruvboxTheme.yellow }}
+                      style={{ color: theme.yellow }}
                     >
                       {project.title}
                     </h3>
                     <p 
                       className="mb-4 text-left text-sm"
-                      style={{ color: gruvboxTheme.orange }}
+                      style={{ color: theme.orange }}
                     >
                       {project.description}
                     </p>
@@ -70,8 +72,8 @@ const Projects = () => {
                           key={tech}
                           className="text-xs px-1.5 py-0.5 rounded-full"
                           style={{ 
-                            backgroundColor: gruvboxTheme.green,
-                            color: gruvboxTheme.bg0
+                            backgroundColor: theme.green,
+                            color: theme.bg0
                           }}
                         >
                           {tech}
@@ -86,11 +88,11 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         className="px-3 py-1 rounded-lg transition-colors text-sm border"
                         style={{ 
-                          borderColor: gruvboxTheme.bg3,
-                          color: gruvboxTheme.fg3 
+                          borderColor: theme.bg3,
+                          color: theme.fg3 
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.backgroundColor = gruvboxTheme.bg3;
+                          e.currentTarget.style.backgroundColor = theme.bg3;
                         }}
                         onMouseLeave={(e) => {
                           e.currentTarget.style.backgroundColor = 'transparent';

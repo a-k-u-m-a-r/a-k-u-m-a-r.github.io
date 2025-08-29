@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import blogsData from '../data/blogs.json';
-import { gruvboxTheme } from '../theme/gruvbox';
+import { useTheme } from '../context/ThemeContext';
 import Navbar from './Navbar';
 
 const Blogs = () => {
+  const { theme } = useTheme();
+  
   return (
-    <div className="min-h-screen py-12" style={{ backgroundColor: gruvboxTheme.bg0 }}>
+    <div className="min-h-screen py-12" style={{ backgroundColor: theme.bg0 }}>
       <div className="max-w-6xl mx-auto px-6">
         <Navbar />
       </div>

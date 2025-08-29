@@ -1,10 +1,12 @@
 // import { Link } from 'react-router-dom';
-import { gruvboxTheme } from '../theme/gruvbox';
+import { useTheme } from '../context/ThemeContext';
 import Navbar from './Navbar';
 
 const Home = () => {
+  const { theme } = useTheme();
+  
   return (
-    <div className="min-h-screen py-12" style={{ backgroundColor: gruvboxTheme.bg0 }}>
+    <div className="min-h-screen py-12" style={{ backgroundColor: theme.bg0 }}>
       <div className="max-w-6xl mx-auto px-6">
         <Navbar />
 
@@ -13,13 +15,13 @@ const Home = () => {
             <div className="space-y-4">
               <h2 
                 className="text-5xl font-bold leading-tight"
-                style={{ color: gruvboxTheme.fg1 }}
+                style={{ color: theme.fg1 }}
               >
-                Hi, I'm <span style={{ color: gruvboxTheme.red }}>Akshay Kumar</span>
+                Hi, I'm <span style={{ color: theme.red }}>Akshay Kumar</span>
               </h2>
               <h3 
                 className="text-2xl"
-                style={{ color: gruvboxTheme.orange }}
+                style={{ color: theme.orange }}
               >
                 Aspiring Robotics Engineer
               </h3>
@@ -27,7 +29,7 @@ const Home = () => {
             
             <p 
               className="text-lg leading-relaxed"
-              style={{ color: gruvboxTheme.fg3 }}
+              style={{ color: theme.fg3 }}
             >
               This website is to serve as digital representation of all the work I completed, projects in progress, and things I want to blog about. ALSO, its IN PROGRESS atm.
             </p>
@@ -52,11 +54,11 @@ const Home = () => {
             <div 
               className="w-80 h-80 rounded-2xl flex items-center justify-center border-2 shadow-xl"
               style={{ 
-                backgroundColor: gruvboxTheme.bg1, 
-                borderColor: gruvboxTheme.bg3 
+                backgroundColor: theme.bg1, 
+                borderColor: theme.bg3 
               }}
             >
-              <div className="text-center" style={{ color: gruvboxTheme.fg4 }}>
+              <div className="text-center" style={{ color: theme.fg4 }}>
                 <svg 
                   className="w-20 h-20 mx-auto mb-4" 
                   fill="none" 
