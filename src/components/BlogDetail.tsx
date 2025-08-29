@@ -22,9 +22,9 @@ const BlogDetail = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Blog Not Found</h1>
-          <Link to="/blogs" className="text-blue-400 hover:text-blue-300">
+          {/* <Link to="/blogs" className="text-blue-400 hover:text-blue-300">
             ← Back to Blogs
-          </Link>
+          </Link> */}
         </div>
       </div>
     );
