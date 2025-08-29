@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card} from '@/components/ui/card';
 import projectsData from '../data/projects.json';
 import { gruvboxTheme } from '../theme/gruvbox';
 import Navbar from './Navbar';
