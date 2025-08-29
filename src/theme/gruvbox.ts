@@ -2,7 +2,7 @@
 export const gruvboxTheme = {
   // Background colors
   bg0: '#282828',
-  bg1: '#3c3836',
+  bg1: "#1e2021",
   bg2: '#504945',
   bg3: '#665c54',
   bg4: '#7c6f64',
